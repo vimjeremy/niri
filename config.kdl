@@ -1,0 +1,77 @@
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
+
+spawn-at-startup "noctalia-shell"
+
+input {
+	mouse { 
+		accel-profile "flat"
+	}
+	keyboard {
+		xkb { 
+			layout "pl"
+		}
+		repeat-rate 30
+		repeat-delay 200
+		numlock
+	};
+};
+
+output "DP-1" {
+	mode "2560x1440@359.979"
+}
+
+layout {
+	gaps 5
+	center-focused-column "on-overflow"
+	focus-ring {
+		off
+	}
+	border {
+		width 2
+		active-color "#7aa2f7"
+		inactive-color "#595959"
+	}
+}
+
+window-rule {
+	geometry-corner-radius 12
+	clip-to-geometry true
+}
+
+binds {
+	"Mod+Return" { spawn "foot"; }
+	"Mod+Space" { spawn-sh "noctalia-shell ipc call launcher toggle"; }
+	"Mod+Q" { close-window; }
+	"Mod+F" { maximize-column; }
+	"Mod+Shift+F" { fullscreen-window; }
+	"Mod+G" { toggle-window-floating; }
+	"Mod+O" { toggle-overview; }
+
+	"Mod+H" { focus-column-left; }
+	"Mod+J" { focus-window-down; }
+	"Mod+K" { focus-window-up; }
+	"Mod+L" { focus-column-right; }
+
+	"Mod+Shift+H" { move-column-left; }
+	"Mod+Shift+J" { move-window-down; }
+	"Mod+Shift+K" { move-window-up; }
+	"Mod+Shift+L" { move-column-right; }
+
+	"Mod+Ctrl+H" { set-column-width "-5%"; }
+	"Mod+Ctrl+L" { set-column-width "+5%"; }
+	"Mod+Ctrl+J" { set-window-height "-5%"; }
+	"Mod+Ctrl+K" { set-window-height "+5%"; }
+
+	"Mod+1" { focus-workspace 1; }
+	"Mod+2" { focus-workspace 2; }
+	"Mod+3" { focus-workspace 3; }
+	"Mod+4" { focus-workspace 4; }
+	"Mod+5" { focus-workspace 5; }
+
+	"Mod+Shift+1" { move-column-to-workspace 1; }
+	"Mod+Shift+2" { move-column-to-workspace 2; }
+	"Mod+Shift+3" { move-column-to-workspace 3; }
+	"Mod+Shift+4" { move-column-to-workspace 4; }
+	"Mod+Shift+5" { move-column-to-workspace 5; }
+}
