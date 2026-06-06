@@ -48,6 +48,8 @@ binds {
 	"Mod+G" { toggle-window-floating; }
 	"Mod+O" { toggle-overview; }
 
+	"Mod+Shift+Q" { spawn-sh "pkill niri"; }
+
 	"Mod+H" { focus-column-left; }
 	"Mod+J" { focus-window-down; }
 	"Mod+K" { focus-window-up; }
